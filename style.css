@@ -1,0 +1,174 @@
+:root {
+    --color-principal: #0A3871;
+    --color-secundario: #E5E5E5;
+}
+
+body {
+    background-color: var(--color-secundario);
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center;
+    height: 100vh; 
+    margin: 2vh; 
+    font-family: "Inter", sans-serif;
+    flex-direction: column;
+}
+
+.contenedor-contenido {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.input-texto-para-encriptar {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 32px;
+    font-weight: 400;
+}
+
+.contenedor-principal {
+    width: 60%;
+    height: 90vh;
+    margin-left: 5%;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+
+.instrucciones{ 
+    font-size: 12px;
+}
+
+.botones {
+    margin-top: auto; 
+    width: 90%;
+    display: flex;
+    justify-content: flex-end; 
+    gap: 24px;
+    padding: 2%;
+    align-self: flex-end;
+}
+
+.boton-encriptar,
+.boton-desencriptar {
+    height: 67px;
+    width: 50%;
+    border-radius: 20px;
+    font-size: 16px;
+}
+
+.boton-encriptar {
+    background-color: var(--color-principal);
+    border: none;
+    color: white;
+}
+
+.boton-desencriptar {
+    background-color: #D8DFE8;
+    color: var(--color-principal);
+    border-color: var(--color-principal);
+    border-style: groove;
+}
+
+
+
+.respuesta {
+    background-color: white;
+    width: 45vh;
+    margin-right: 3%;
+    margin-bottom: 3%;
+    margin-top: 3%;
+    border-radius: 24px;
+    padding: 10% 5%;
+    height: 90vh;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.boton-copiar {
+    height: 50px;
+    width: 100% ;
+    border-radius: 16px;
+    border-color: var(--color-principal);
+    border-style: groove;
+    align-self: stretch;
+    margin-top: auto;
+    
+}
+
+img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.mensaje-no-encontrado{
+    font-size: 24px;
+    align-self: center;
+}
+
+.introduce-texto{
+    font-size: 16px;
+}
+
+footer {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--color-principal);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+@media (max-width: 1000px) {
+    body {
+        flex-direction: column;
+        align-items: center; 
+    }
+    
+    .respuesta {
+        margin-right: 0;
+        margin-top: 20px; 
+        width: 80%; 
+        padding: 5px;
+        height: auto; 
+        order: 2; 
+    }
+    
+    .contenedor-principal {
+        width: 80%; 
+        order: 1; 
+    }
+    
+    .respuesta img {
+        display: none;
+    }
+}
+
+@media (max-width: 500px) {
+    .botones {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%; 
+    }
+
+    .boton-encriptar,
+    .boton-desencriptar {
+        width: 100%; 
+        margin: 0;
+    }
+    .respuesta{
+        align-self: center;
+    }
+}
+
